@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f5f5;
+    padding: 40px 20px;
+}
+
+.cta-section {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.cta-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.cta-content {
+    background: linear-gradient(135deg, #6b8ca8 0%, #8ba5bb 100%);
+    padding: 60px 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+.cta-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    opacity: 0.9;
+}
+
+.cta-heading {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.cta-description {
+    font-size: 1rem;
+    margin-bottom: 40px;
+    opacity: 0.95;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: white;
+    color: #5a7a94;
+    padding: 16px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    width: fit-content;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    background: #f8f8f8;
+}
+
+.cta-button-icon {
+    width: 24px;
+    height: 24px;
+    background: #5a7a94;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover .cta-button-icon {
+    transform: translateX(3px);
+}
+
+.cta-image {
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+        url('https://images.pexels.com/photos/7705099/pexels-photo-7705099.jpeg') center/cover;
+    position: relative;
+}
+
+@media (max-width: 968px) {
+    .cta-container {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .cta-content {
+        padding: 50px 35px;
+    }
+
+    .cta-heading {
+        font-size: 1.8rem;
+    }
+
+    .cta-image {
+        min-height: 350px;
+        order: -1;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-content {
+        padding: 40px 25px;
+    }
+
+    .cta-heading {
+        font-size: 1.5rem;
+    }
+
+    .cta-description {
+        font-size: 0.95rem;
+    }
+
+    .cta-image {
+        min-height: 280px;
+    }
+}

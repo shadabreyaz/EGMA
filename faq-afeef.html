@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EGMA | See a Better World</title>
+    <link rel="stylesheet" href="faq-afeef.css">
+</head>
+
+<body>
+
+    <section class="faq-section">
+        <div class="faq-header">
+            <h1>Inside Egma: What Our Partners and Clients Ask Most</h1>
+        </div>
+
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">What does Egma Lens Company specialize in?</button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Egma Lens Company specializes in the distribution of premium ophthalmic lenses, optical
+                        equipment, and vision-care solutions across the Middle East. We partner with globally recognized
+                        brands to provide high-quality products to optical retailers, clinics, and laboratories.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Where is Egma Lens Company located?</button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Our head office and main distribution facility are based in Dubai, United Arab Emirates. We also
+                        operate across GCC countries through our regional network of partners and authorized dealers.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Do you supply to individuals or only to businesses?</button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        We primarily serve optical retailers, clinics, hospitals, and vision professionals. However,
+                        individuals can contact us for product information or to locate the nearest authorized optical
+                        partner.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">What brands does Egma Lens Company represent?</button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Egma partners with world-leading lens and optical technology brands, including (insert brand
+                        names, e.g., Hoya, Kodak, or Rodenstock). This ensures our clients receive products that meet
+                        international quality and innovation standards.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Does Egma provide training or technical support?</button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Yes. We offer comprehensive product training, technical assistance, and after-sales support for
+                        our partners and clients. Our goal is to ensure that optical professionals can deliver the best
+                        visual experience to their customers.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Are your products certified and compliant with global standards?</button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Yes. All Egma lenses and optical products comply with international quality and safety
+                        standards, including ISO and CE certifications, ensuring consistent performance and reliability.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const faqQuestions = document.querySelectorAll('.faq-question');
+
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const isActive = question.classList.contains('active');
+
+                faqQuestions.forEach(q => {
+                    q.classList.remove('active');
+                    q.nextElementSibling.classList.remove('active');
+                });
+
+                if (!isActive) {
+                    question.classList.add('active');
+                    question.nextElementSibling.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

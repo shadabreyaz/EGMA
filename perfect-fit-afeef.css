@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    max-width: 1400px;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+
+/* Perfect Fit Section =================================================================== */
+.find-section {
+    padding: 36px 40px;
+    margin: 0 auto;
+}
+
+.find-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 32px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #1d1d1d;
+}
+
+.find-card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.find-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    min-height: 240px;
+    display: flex;
+    align-items: flex-end;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease;
+    padding: 20px 24px;
+}
+
+.find-card:hover {
+    transform: translateY(-5px);
+}
+
+.find-card.find-card-large {
+    grid-row: span 2;
+}
+
+.find-card-wide {
+    grid-column: 1 / -1;
+}
+
+.find-card:nth-child(1) {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
+        url('https://images.pexels.com/photos/19203032/pexels-photo-19203032.jpeg') center/cover;
+}
+
+.find-card:nth-child(2) {
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)),
+        url('https://images.pexels.com/photos/1798665/pexels-photo-1798665.jpeg') center/cover;
+}
+
+.find-card:nth-child(3) {
+    background: linear-gradient(rgba(180, 150, 255, 0.3), rgba(180, 150, 255, 0.4)),
+        url('https://images.pexels.com/photos/4037163/pexels-photo-4037163.jpeg') center/cover;
+}
+
+.find-card:nth-child(4) {
+    background: linear-gradient(rgba(210, 180, 140, 0.3), rgba(210, 180, 140, 0.4)),
+        url('https://images.pexels.com/photos/16575114/pexels-photo-16575114.jpeg') center/cover;
+}
+
+.find-card-content{
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+    padding: 32px;
+}
+
+.find-card-content h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+    padding-bottom: 12px;
+}
+
+/* .find-card-content p {
+    font-size: 12px;
+    color: white;
+    padding-bottom: 16px;
+} */
+
+.shop-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: capitalize;
+    border-radius: 12px;
+}
+
+.shop-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .find-card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .find-card.find-card-large {
+        grid-row: span 1;
+        min-height: 350px;
+    }
+
+    .find-card {
+        min-height: 250px;
+    }
+}
