@@ -467,6 +467,7 @@ a {
   /* Shop by Category CSS */
   .category-section {
     padding: 4rem 2rem;
+    background-color: var(--bg-light);
   }
   
   .category-header p {
