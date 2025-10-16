@@ -1,13 +1,497 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EGMA | See a Better World</title>
+
+    <!-- Link for fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Fontawesome Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Main style -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Welcome to EGMA</h1>
-    <p>Your gateway to a better world.</p>
+    <!-- Navigation starts here -->
+    <div class="container">
+        <!-- Top Header starts here -->
+        <div class="top-header">
+            <div class="top-header-left">
+                <span class="icon"><i class="fa-regular fa-headphones"></i></span>
+                <span class="phone-number">Need Help? <strong>Call +97143262000</strong></span>
+            </div>
+            <div class="top-header-right">
+                <div class="search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" class="search-bar" placeholder="Search for Eyeglasses" />
+                </div>
+                <a href="#" class="header-link">
+                    <i class="fa-solid fa-user"></i> <span class="text">Sign In</span>
+                </a>
+                <a href="#" class="header-link">
+                    <i class="fa-solid fa-truck-fast"></i> <span class="text">Track Order</span>
+                </a>
+                <a href="#" class="header-link">
+                    <i class="fas fa-map-marker-alt"></i> <span class="text">Find a Store</span>
+                </a>
+            </div>
+        </div>
+    <!-- Top Header ends here -->
+
+    <!-- Bottom Header ends here -->
+        <nav id="navbar" class="navbar">
+            <div class="nav-content">
+                    <a href="/" class="nav-logo">
+                        <img src="assets/egma-logo.png" alt="logo">
+                    </a>
+                    <div class="desktop-nav">
+                        <!-- <a href="#" class="nav-link">Home</a> -->
+                        <a href="#about" class="nav-link">About</a>
+                        <div class="nav-item-with-submenu nav-link">
+                            <a href="#" class="nav-link-text">Eyeglasses <i class="fa-solid fa-caret-down"></i></a>
+                            <div class="submenu">
+                                <a href="#" class="submenu-link">Ophthalmic Lenses</a>
+                                <a href="#" class="submenu-link">Rimmed</a>
+                                <a href="#" class="submenu-link">Semi-Rimmed</a>
+                                <a href="#" class="submenu-link">Rimless</a>
+                            </div>
+                        </div>
+                        <div class="nav-item-with-submenu nav-link">
+                            <a href="#" class="nav-link-text">Sunglasses <i class="fa-solid fa-caret-down"></i></a>
+                            <div class="submenu">
+                                <a href="#" class="submenu-link">Vivid Geometry</a>
+                                <a href="#" class="submenu-link">Smart Sunglasses</a>
+                                <a href="#" class="submenu-link">Polarized</a>
+                                <a href="#" class="submenu-link">Whiplash</a>
+                            </div>
+                        </div>
+                        <a href="#" class="nav-link">Kids Glasses</a> 
+                        <div class="nav-item-with-submenu nav-link">
+                            <a href="#" class="nav-link-text">Brands <i class="fa-solid fa-caret-down"></i></a>
+                            <div class="submenu">
+                                <a href="#" class="submenu-link">FASTRACK</a>
+                                <a href="#" class="submenu-link">ZEFR</a>
+                                <a href="#" class="submenu-link">MAUI JIM</a>
+                                <a href="#" class="submenu-link">ZEISS</a>
+                                <a href="#" class="submenu-link">BAUSCH AND LOMB</a>
+                                <a href="#" class="submenu-link">TED-BAKER</a>
+                            </div>
+                        </div>  
+                        <a href="#" class="nav-link">Contact</a>            
+                    </div>
+                    
+                    <div class="navbar-cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span>Cart</span>
+                    </div>
+
+                    <button class="mobile-menu-toggle" id="mobile-toggle">
+                        <span class="hamburger"></span>
+                        <span class="hamburger"></span>
+                        <span class="hamburger"></span>
+                    </button>
+            </div>
+                
+            <div class="mobile-nav" id="mobile-nav">
+                    <a href="#" class="mobile-nav-link">Home</a>
+                    <a href="#about" class="mobile-nav-link">About</a>
+                    <div class="mobile-nav-item-with-submenu">
+                        <a href="#" class="mobile-nav-link mobile-submenu-toggle">
+                            Eyeglasses <i class="fa-solid fa-caret-down"></i>
+                        </a>
+                        <div class="mobile-submenu">
+                            <a href="#" class="mobile-submenu-link">All Eyeglasses</a>
+                            <a href="#" class="mobile-submenu-link">Ophthalmic Lenses</a>
+                            <a href="#" class="mobile-submenu-link">Rimmed</a>
+                            <a href="#" class="mobile-submenu-link">Semi-Rimmed</a>
+                            <a href="#" class="mobile-submenu-link">Rimless</a>
+                        </div>
+                    </div>
+
+                    <div class="mobile-nav-item-with-submenu">
+                        <a href="#" class="mobile-nav-link mobile-submenu-toggle">
+                            Sunglasses <i class="fa-solid fa-caret-down"></i>
+                        </a>
+                        <div class="mobile-submenu">
+                            <a href="#" class="mobile-submenu-link">All Sunglasses</a>
+                            <a href="#" class="mobile-submenu-link">Vivid Geometry</a>
+                            <a href="#" class="mobile-submenu-link">Smart Sunglasses</a>
+                            <a href="#" class="mobile-submenu-link">Semi-Rimmed</a>
+                            <a href="#" class="mobile-submenu-link">Whiplash</a>
+                        </div>
+                    </div>
+                    <a href="#" class="mobile-nav-link">Contact</a>
+            </div>
+        </nav>
+    <!-- Bottom Header ends here -->    
+    </div>
+    <!-- Navigation ends here -->
+
+    <main>
+        <!-- Hero Section starts here -->
+        <section class="hero-wrapper">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-heading">
+                        <h1>Find Your perfect eye wear look</h1>
+                        <p>
+                            EGMA lenses are built with German technology and fine tuned for the region’s climate, offering lasting clarity, durability, and comfort.Our lenses perform reliably in the toughest conditions so you can see better.
+                        </p>
+                        <div class="hero-btns">
+                            <a href="#" class="cta-button primary-btn">Explore Products</a>
+                            <a href="#" class="cta-button secondary-btn">Contact Us</a>
+                        </div>
+                        <div class="hero-rating">
+                            <div class="customer">
+                                <img src="assets/card-1.jpg" alt="rating">
+                                <div class="customer-rating">
+                                    <strong>50K+</strong>
+                                    <span>Satisfied Customer</span>
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                <span>15,008 <strong>Excellent</strong></span>
+                            </div>
+                        </div>
+                          
+                    </div>
+                    <div class="hero-slider">
+                        <div class="slider-track">
+                          <div class="slider-card">
+                            <img src="assets/card-1.jpg" alt="eyewear model">
+                            <div class="card-overlay">
+                              <span class="card-name">Hugo Boss</span>
+                              <a href="#" class="glass-btn">
+                                Discover <i class="fa-solid fa-angle-right"></i></i>
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="slider-card">
+                            <img src="assets/card-2.jpg" alt="eyewear model-2">
+                            <div class="card-overlay">
+                              <span class="card-name">Alex Perry</span>
+                              <a href="#" class="glass-btn">
+                                Discover <i class="fa-solid fa-angle-right"></i></i>
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="slider-card">
+                            <img src="assets/card-3.jpg" alt="eyewear model-3">
+                            <div class="card-overlay">
+                              <span class="card-name">Zeiss</span>
+                              <a href="#" class="glass-btn">
+                                Discover <i class="fa-solid fa-angle-right"></i></i>
+                              </a>
+                            </div>
+                          </div>
+                          
+                          <div class="slider-card">
+                            <img src="assets/card-1.jpg" alt="eyewear model">
+                            <div class="card-overlay">
+                              <span class="card-name">Hugo Boss</span>
+                              <a href="#" class="glass-btn">
+                                Discover <i class="fa-solid fa-angle-right"></i></i>
+                              </a>
+                            </div>
+                          </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Hero Section ends here -->
+
+        <!-- Our Bestseller Section starts here -->
+        <section class="bestseller-wrapper">
+            <div class="container">
+                <div class="bestseller-heading">
+                    <h2>Our Bestseller</h2>
+                    <a href="#" class="cta-button primary-btn">View All</a>
+                </div>
+
+                <div class="bestseller-cards">
+
+                    <!-- Card 1 -->
+                    <div class="bestseller-card">
+                      <div class="product-image">
+                        <img src="assets/lense1.webp" alt="Product 1">
+                        <div class="product-tags">
+                          <span class="tag best-seller">Best Seller</span>
+                        </div>
+                      </div>
+                      <div class="product-info">
+                       <div class="bestseller-price">
+                         <h3 class="product-name">Hooper Screen Glasses</h3>
+                         <p class="brand-name">Hooper</p>
+                         <p class="price">$9.99</p>
+                       </div>
+                        <div>
+                            <div class="color-options">
+                                <span class="color-swatch color-black"></span>
+                                <span class="color-swatch color-red"></span>
+                            </div>
+                            <div class="bestseller-rating">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="add-to-cart">
+                        <p>Add To Cart</p>
+                      </div>
+                    </div>
+                  
+                    <!-- Card 2 -->
+                    <div class="bestseller-card">
+                        <div class="product-image">
+                          <img src="assets/lense2.webp" alt="Product 1">
+                          <div class="product-tags">
+                            <span class="tag best-seller">Best Seller</span>
+                          </div>
+                        </div>
+                        <div class="product-info">
+                         <div class="bestseller-price">
+                           <h3 class="product-name">Blue Transparent Full Rim Round</h3>
+                           <p class="brand-name">EGMA</p>
+                           <p class="price">$39.99</p>
+                         </div>
+                          <div>
+                              <div class="color-options">
+                                  <span class="color-swatch color-blue"></span>
+                                  <span class="color-swatch color-red"></span>
+                              </div>
+                              <div class="bestseller-rating">
+                                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                              </div>
+                          </div>
+                        </div>
+                        <div class="add-to-cart">
+                          <p>Add To Cart</p>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="bestseller-card">
+                        <div class="product-image">
+                          <img src="assets/lense3.webp" alt="Product 1">
+                          <div class="product-tags">
+                            <span class="tag best-seller">Best Seller</span>
+                          </div>
+                        </div>
+                        <div class="product-info">
+                         <div class="bestseller-price">
+                           <h3 class="product-name">Skyler (Gen 2)</h3>
+                           <p class="brand-name">Rayban Meta</p>
+                           <p class="price">$19.99</p>
+                         </div>
+                          <div>
+                              <div class="color-options">
+                                  <span class="color-swatch color-blue"></span>
+                                  <span class="color-swatch color-black"></span>
+                              </div>
+                              <div class="bestseller-rating">
+                                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                              </div>
+                          </div>
+                        </div>
+                        <div class="add-to-cart">
+                          <p>Add To Cart</p>
+                        </div>
+                    </div>
+                  
+                </div>
+                  
+            </div>
+        </section>
+        <!-- Our Bestseller Section ends here -->
+
+        <!-- Why choose Egma Section starts here -->
+        <section class="why-section">
+            <div class="container">
+          
+              <div class="why-content">
+                <!-- left side content -->
+                <div class="why-image">
+                  <img src="assets/images/why-image.webp" alt="About EGMA">
+                </div>
+          
+                <!-- right side content -->
+                <div class="why-text">
+                  <h3>Why <span class="why-text-logo-1">E<span class="why-text-logo-2">GM</span>A</span> Lens?</h3>
+                  <h4 class="why-subheading">
+                    When You <span class="highlight">Need Vision</span> That Lasts
+                    <span class="highlight">Choose EGMA</span> Precision Lenses
+                  </h4>
+                  <p>
+                    At EGMA, innovation meets craftsmanship. With German-engineered technology and 50 years of expertise,
+                    we create lenses designed for clarity, comfort, and confidence, built to perform in the Middle East’s
+                    demanding conditions. Our commitment to excellence ensures every lens enhances not just vision, but life itself.
+                  </p>
+          
+                <div class="benefits-container">
+                  <div class="benefits-list">
+          
+                   <div class="benefit-item">
+                     <i class="fa-solid fa-check"></i>
+                     <span>UV Resistant</span>
+                   </div>
+                   <div class="benefit-item">
+                     <i class="fa-solid fa-check"></i>
+                     <span>Blue Light Resistant</span>
+                   </div>
+                   <div class="benefit-item">
+                     <i class="fa-solid fa-check"></i>
+                     <span>Anti-Reflection</span>
+                   </div>
+          
+                  </div>
+          
+                  <div class="benefits-list">
+                    <div class="benefit-item">
+                      <i class="fa-solid fa-check"></i>
+                      <span>Scratch Resistant</span>
+                    </div>
+                    <div class="benefit-item">
+                      <i class="fa-solid fa-check"></i>
+                      <span>Dust Resistant</span>
+                    </div>
+                    <div class="benefit-item">
+                      <i class="fa-solid fa-check"></i>
+                      <span>Water Repellent</span>
+                    </div>
+                  </div>
+          
+                </div>
+
+                </div>
+              </div>
+            </div>
+        </section>
+        <!-- Why choose Egma Section ends here -->
+
+        <!-- About us Section starts here -->
+        <section id="about" class="about-section">
+            <div class="container">
+              <div class="about-content">
+              <div class="about-image">
+                <img src="assets/images/About-image.jpg" alt="About Dexiconn">
+              </div>
+        
+              <div class="about-text">
+                <h3 class="about-title">ABOUT <span class="why-text-logo-1">E<span class="why-text-logo-2">GM</span>A</span></h3>
+                <!-- <h2 class="about-heading">EGMA</h2> -->
+                <p class="about-paragraph">
+                 We started EGMA to solve a simple problem: eyewear that was overpriced 
+                 and underwhelming. Today, we serve thousands of customers with high-quality,
+                 precision-crafted ophthalmic lenses designed for real life.
+                 Using advanced German technology and machinery, and backed by over 50 years of
+                 trust and expertise, EGMA specializes in creating lenses tailored for the Middle East 
+                 market. Our innovative coatings and treatments are meticulously tested to ensure clarity,
+                 comfort, and durability in every pair.
+                </p>
+                <p class="about-paragraph">
+                 Each lens reflects our commitment to optical excellence, precision, and visual well-being.
+                 By continuously investing in research and advanced manufacturing, we deliver lenses that 
+                 redefine vision quality and comfort, combining craftsmanship and technology for lasting clarity and confidence.
+                   
+                </p>
+                <button class="cta-button primary-btn about-btn">Learn More</button>
+              </div>
+              </div>
+            </div>
+        </section>
+        <!-- About us Section ends here -->  
+
+         <!-- FAQ section starts here -->
+         <section class="faq-section">
+            <div class="container">
+                <div class="questions-section">
+                    <div class="left-col">
+                        <p>You Asked, We Answer</p>
+                        <h2>Frequently asked<br>questions</h2>
+                    </div>
+
+                    <div class="right-col">
+                        <div class="faq-item ">
+                            <div class="faq-question">
+                                <span>What makes EGMA lenses different from others?</span>
+                                <button class="toggle-btn"></button>
+                            </div>
+                            <div class="faq-answer">
+                                EGMA lenses combine German technology with decades of expertise to deliver precision, 
+                                comfort, and durability. Designed for the Middle East, they offer superior protection 
+                                against UV rays, blue light, glare, scratches, dust, and water, ensuring long-lasting, clear vision.
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Can I order customized prescription lenses through EGMA?</span>
+                                <button class="toggle-btn"></button>
+                            </div>
+                            <div class="faq-answer">
+                                Yes. EGMA offers customized prescription lenses with various coatings and treatments, tailored to your prescription and designed for the Middle East’s climate.
+                                You can order them through authorized retailers or optical stores.
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Are EGMA lenses suitable for Middle East weather conditions?</span>
+                                <button class="toggle-btn"></button>
+                            </div>
+                            <div class="faq-answer">
+                                Yes. EGMA lenses are specifically designed and tested to withstand the Middle
+                                East’s harsh climate, including heat, dust, and sunlight, while maintaining clarity,
+                                comfort, and durability.
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Do EGMA lenses come with a warranty or replacement policy?</span>
+                                <button class="toggle-btn"></button>
+                            </div>
+                            <div class="faq-answer">
+                                Yes. EGMA lenses come with support and replacement options through authorized 
+                                 retailers to ensure customer satisfaction.
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Where can I purchase EGMA lenses or find authorized partners?</span>
+                                <button class="toggle-btn"></button>
+                            </div>
+                            <div class="faq-answer">
+                                You can purchase EGMA lenses through authorized retailers and distributors in the Middle East,
+                                including Dubai Optical, EGMA Optical Supplies, and Rivoli Group.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FAQ section ends here -->
+    </main>
+    
+
+    <script src="script.js"></script>
 </body>
+
 </html>
