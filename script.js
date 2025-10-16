@@ -56,7 +56,7 @@ function prevSlide() {
 }
 
 function startAutoSlide() {
-  autoSlide = setInterval(nextSlide, 4000); // 5 sec delay
+  autoSlide = setInterval(nextSlide, 2000); // 5 sec delay
 }
 
 function stopAutoSlide() {
@@ -79,6 +79,15 @@ prevBtn.addEventListener("click", () => {
 // Initialize
 showSlide(current);
 startAutoSlide();
+
+
+//  For shop by category ends here 
+const slider = document.querySelector(".category-slider");
+const leftBtn = document.querySelector(".scroll-btn.left");
+const rightBtn = document.querySelector(".scroll-btn.right");
+
+leftBtn.onclick = () => slider.scrollBy({ left: -300, behavior: "smooth" });
+rightBtn.onclick = () => slider.scrollBy({ left: 300, behavior: "smooth" });
 
 
 document.addEventListener("DOMContentLoaded", () => {
