@@ -1213,6 +1213,10 @@ p.stat-label {
         opacity: 0;
     }
 
+    .category-card {
+    flex: 0 0 220px; /* fewer cards fit */
+    }
+
     .mobile-menu-toggle.open span:nth-child(3) {
         transform: rotate(-45deg) translate(5px, -6px);
     }
@@ -1244,6 +1248,9 @@ p.stat-label {
     .bestseller-cards{
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
+    .category-card {
+    flex: 0 0 180px;
+    }
     .why-content {
       flex-direction: column;
       align-items: center;
@@ -1273,6 +1280,16 @@ p.stat-label {
     .top-header{
         padding: 8px 24px;
     }
+
+    .category-card {
+    flex: 0 0 150px;
+  }
+  .category-overlay h4 {
+    font-size: 1rem;
+  }
+  .category-overlay p {
+    font-size: 0.7rem;
+  }
     .navbar{
         padding: 12px 24px 0 24px;
     }
@@ -1344,6 +1361,20 @@ p.stat-label {
     .phone-number{
         font-size: 12px;
     }
+      .category-card {
+    flex: 0 0 120px; /* almost full width on tiny screens */
+  }
+  .category-overlay h4 {
+    font-size: 0.9rem;
+  }
+  .category-overlay p {
+    font-size: 0.6rem;
+  }
+  .scroll-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 0.8rem;
+  }
     .navbar{
         padding: 12px 8px 0 8px;
     }
