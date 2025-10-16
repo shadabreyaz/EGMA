@@ -19,6 +19,67 @@ document.addEventListener('click', (event) => {
     }
 });
 
+// FAQ script
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+    item.querySelector('.faq-question').addEventListener('click', () => {
+        faqItems.forEach(i => {
+            if (i !== item) i.classList.remove('active');
+        });
+        item.classList.toggle('active');
+    });
+});
+
+// for Customer review slider
+const cards = document.querySelectorAll(".review-card");
+const prevBtn = document.querySelector(".prev-arrow");
+const nextBtn = document.querySelector(".next-arrow");
+let current = 0;
+let autoSlide;
+
+function showSlide(index) {
+  cards.forEach((card, i) => {
+    card.classList.remove("active");
+    if (i === index) card.classList.add("active");
+  });
+}
+
+function nextSlide() {
+  current = (current + 1) % cards.length;
+  showSlide(current);
+}
+
+function prevSlide() {
+  current = (current - 1 + cards.length) % cards.length;
+  showSlide(current);
+}
+
+function startAutoSlide() {
+  autoSlide = setInterval(nextSlide, 4000); // 5 sec delay
+}
+
+function stopAutoSlide() {
+  clearInterval(autoSlide);
+}
+
+// Event listeners
+nextBtn.addEventListener("click", () => {
+  stopAutoSlide();
+  nextSlide();
+  startAutoSlide();
+});
+
+prevBtn.addEventListener("click", () => {
+  stopAutoSlide();
+  prevSlide();
+  startAutoSlide();
+});
+
+// Initialize
+showSlide(current);
+startAutoSlide();
+
 
 document.addEventListener("DOMContentLoaded", () => {
     // For Submenu
@@ -33,43 +94,6 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         mobileSubmenu.style.display = "flex";
       }
-    });
-
-
-    // // for hero slider
-    // const track = document.querySelector('.slider-track');
-    // const cards = document.querySelectorAll('.slider-card');
-    // const cardWidth = cards[0].offsetWidth + 32;
-    
-    // let index = 0;
-    
-    // function autoSlide() {
-    //   index++;
-    //   track.style.transition = 'transform 0.7s ease';
-    //   track.style.transform = `translateX(-${cardWidth * index}px)`;
-    
-    //   if (index === cards.length - 1) {
-    //     setTimeout(() => {
-    //       track.style.transition = 'none'; 
-    //       track.style.transform = 'translateX(0)';
-    //       index = 0;
-    //     }, 700); 
-    //   }
-    // }
-    
-    // setInterval(autoSlide, 2400);
-
-});
-
-// FAQ script
-const faqItems = document.querySelectorAll('.faq-item');
-
-faqItems.forEach(item => {
-    item.querySelector('.faq-question').addEventListener('click', () => {
-        faqItems.forEach(i => {
-            if (i !== item) i.classList.remove('active');
-        });
-        item.classList.toggle('active');
     });
 });
 
@@ -129,3 +153,44 @@ document.addEventListener("DOMContentLoaded", function () {
     startSlider();
   });
 });
+
+
+
+
+
+
+// for stats
+function animateCounter(element, target, duration, suffix) {
+  let start = 0;
+  const increment = target / (duration / 16);
+  const isDecimal = target % 1 !== 0;
+
+  const timer = setInterval(() => {
+      start += increment;
+      if (start >= target) {
+          element.textContent = (isDecimal ? target.toFixed(1) : Math.ceil(target)) + suffix;
+          clearInterval(timer);
+      } else {
+          element.textContent = (isDecimal ? start.toFixed(1) : Math.ceil(start)) + suffix;
+      }
+  }, 16);
+}
+
+function initCounters() {
+  const counters = document.querySelectorAll('.stat-number');
+
+  const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              const target = parseFloat(entry.target.dataset.target);
+              const suffix = entry.target.dataset.suffix || '';
+              animateCounter(entry.target, target, 2000, suffix);
+              observer.unobserve(entry.target);
+          }
+      });
+  }, { threshold: 0.5 });
+
+  counters.forEach(counter => observer.observe(counter));
+}
+
+window.addEventListener('load', initCounters);
