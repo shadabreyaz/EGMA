@@ -596,8 +596,9 @@ a {
   }
 
   /*Perfect fit CSS  */
-  .find-section {
+.find-section {
   padding: 4rem 2rem; 
+  background-color: var(--bg-light);
   }
 
 .find-sub-title {
