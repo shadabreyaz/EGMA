@@ -654,22 +654,22 @@ a {
 
 .find-card:nth-child(1) {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.55), transparent 80%),
-        url('assets/images/fit1.jpeg') center/cover;
+        url('assets/images/fit1.webp') center/cover;
 }
 
 .find-card:nth-child(2) {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.55), transparent 80%),
-        url('assets/images/fit2.jpeg') center/cover;
+        url('assets/images/fit2.webp') center/cover;
 }
 
 .find-card:nth-child(3) {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.55), transparent 80%),
-        url('assets/images/fit3.jpeg') center/cover;
+        url('assets/pexels-abedalbaset-6664990.webp') center/cover;
 }
 
 .find-card:nth-child(4) {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.55), transparent 80%),
-        url('assets/images/fit4.jpeg') center/cover;
+        url('assets/images/fit4.webp') center/cover;
 }
 
 .find-card-content {
