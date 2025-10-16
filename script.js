@@ -129,3 +129,14 @@ document.addEventListener("DOMContentLoaded", function () {
     startSlider();
   });
 });
+
+
+
+
+  const slider = document.querySelector(".category-slider");
+  const leftBtn = document.querySelector(".scroll-btn.left");
+  const rightBtn = document.querySelector(".scroll-btn.right");
+
+  leftBtn.onclick = () => slider.scrollBy({ left: -300, behavior: "smooth" });
+  rightBtn.onclick = () => slider.scrollBy({ left: 300, behavior: "smooth" });
+
