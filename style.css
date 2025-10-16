@@ -653,22 +653,22 @@ a {
 
 .find-card:nth-child(1) {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.55), transparent 80%),
-        url('https://images.pexels.com/photos/19203032/pexels-photo-19203032.jpeg') center/cover;
+        url('assets/images/fit1.jpeg') center/cover;
 }
 
 .find-card:nth-child(2) {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.55), transparent 80%),
-        url('https://images.pexels.com/photos/1798665/pexels-photo-1798665.jpeg') center/cover;
+        url('assets/images/fit2.jpeg') center/cover;
 }
 
 .find-card:nth-child(3) {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.55), transparent 80%),
-        url('https://images.pexels.com/photos/4037163/pexels-photo-4037163.jpeg') center/cover;
+        url('assets/images/fit3.jpeg') center/cover;
 }
 
 .find-card:nth-child(4) {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.55), transparent 80%),
-        url('https://images.pexels.com/photos/16575114/pexels-photo-16575114.jpeg') center/cover;
+        url('assets/images/fit4.jpeg') center/cover;
 }
 
 .find-card-content {

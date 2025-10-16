@@ -164,7 +164,21 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// For animation
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in-view');
+      observer.unobserve(entry.target); // Animate only once
+    }
+  });
+}, {
+  threshold: 0.2
+});
 
+document.querySelectorAll('.animate-on-scroll').forEach(el => {
+  observer.observe(el);
+});
 
 
 
