@@ -594,7 +594,151 @@ a {
     margin-bottom: 12px;
     font-weight: 600;
   }
-  
+
+  /*Perfect fit CSS  */
+  .find-section {
+  padding: 4rem 2rem; 
+  }
+
+.find-sub-title {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-weight: 600;
+
+}
+
+.find-title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 32px;
+    padding-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.find-card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.find-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    min-height: 240px;
+    display: flex;
+    align-items: flex-end;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease;
+    padding: 12px 16px;
+}
+
+.find-card:hover {
+    transform: translateY(-5px);
+}
+
+.find-card.find-card-large {
+    grid-row: span 2;
+}
+
+.find-card-wide {
+    grid-column: 1 / -1;
+}
+
+.find-card:nth-child(1) {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.55), transparent 80%),
+        url('https://images.pexels.com/photos/19203032/pexels-photo-19203032.jpeg') center/cover;
+}
+
+.find-card:nth-child(2) {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.55), transparent 80%),
+        url('https://images.pexels.com/photos/1798665/pexels-photo-1798665.jpeg') center/cover;
+}
+
+.find-card:nth-child(3) {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.55), transparent 80%),
+        url('https://images.pexels.com/photos/4037163/pexels-photo-4037163.jpeg') center/cover;
+}
+
+.find-card:nth-child(4) {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.55), transparent 80%),
+        url('https://images.pexels.com/photos/16575114/pexels-photo-16575114.jpeg') center/cover;
+}
+
+.find-card-content {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.find-card-content.split-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* flex-direction: row; */
+    padding: 0;
+    background: transparent;
+    gap: 8px;
+}
+
+.name-btn {
+    color: var(--bg-light);
+    border: none;
+    font-family: var(--font-family);
+    font-size: 1.34rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    text-align: left;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.discover-btn {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: var(--bg-light);
+    border: none;
+    padding: 8px 12px;
+    font-family: var(--font-family);
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+.discover-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.arrow {
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+.discover-btn:hover .arrow {
+    transform: translateX(4px);
+}
+
+
   /* Our Bestseller CSS */
   .bestseller-wrapper{
     padding: 4rem 2rem;
@@ -1424,7 +1568,7 @@ p.stat-label {
         padding: 12px 24px 0 24px;
     }
     .bestseller-wrapper,.why-section,
-    .about-section,.faq-section,.review-section{
+    .about-section,.faq-section,.review-section,.find-section{
       padding: 3rem 24px;
     }
     .cta-section {
@@ -1483,6 +1627,26 @@ p.stat-label {
    p.stat-label {
     font-size: 16px;
    }
+   .find-card-container {
+    grid-template-columns: 1fr;
+  }
+
+  .find-card.find-card-large {
+      grid-row: span 1;
+      min-height: 350px;
+  }
+
+  .find-card {
+      min-height: 250px;
+  }
+
+  .name-btn {
+      padding: 10px 12px;
+  }
+
+  .discover-btn {
+      padding: 10px 12px;
+  }
 }
 @media screen and (max-width: 480px) {
     .top-header{
@@ -1491,8 +1655,8 @@ p.stat-label {
     .phone-number{
         font-size: 12px;
     }
-      .category-card {
-    flex: 0 0 120px; /* almost full width on tiny screens */
+  .category-card {
+    flex: 0 0 120px;
   }
   .category-overlay h4 {
     font-size: 0.9rem;
@@ -1509,7 +1673,7 @@ p.stat-label {
         padding: 12px 8px 0 8px;
     }
     .bestseller-wrapper,.why-section,
-    .about-section,.faq-section,.review-section {
+    .about-section,.faq-section,.review-section,.find section {
       padding: 2rem 8px;
     }
     .cta-section {
@@ -1567,6 +1731,12 @@ p.stat-label {
     }
     .faq-question span,.faq-answer {
       font-size: 18px;
+    }
+    .name-btn {
+      font-size: 14px;
+   }
+    .discover-btn {
+        font-size: 14px;
     }
     .cta-image{
       height: 200px;
