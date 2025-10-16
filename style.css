@@ -29,6 +29,7 @@ h5 {
 html,
 body {
     max-width: 100%;
+    overflow-x: hidden;
 }
 
 html {
@@ -312,7 +313,7 @@ a {
   }
   
   .hero-heading h1 {
-    font-size: clamp(2.5rem, 6vw, 6rem);
+    font-size: clamp(2.8rem, 6vw, 6rem);
     line-height: 1;
     margin-bottom: 1.05rem;
     color: #fff;
@@ -470,15 +471,17 @@ a {
     background-color: var(--bg-light);
   }
   
-  .category-header p {
-    font-size: 1.1rem;
-    color: #666;
+  .category-sub-heading {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
     margin-bottom: 0.4rem;
     text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
   
-  .category-header h3 {
-    font-size: clamp(2rem, 5vw, 3rem);
+  .category-heading {
+    font-size: clamp(2.8rem, 6vw, 3.5rem);
     font-weight: 600;
     margin-bottom: 2rem;
      text-align: center;
@@ -596,34 +599,11 @@ a {
   }
 
   /*Perfect fit CSS  */
-.find-section {
-  padding: 4rem 2rem; 
-  background-color: var(--bg-light);
-  }
-
-.find-sub-title {
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-    font-weight: 600;
-
-}
-
-.find-title {
-    text-align: center;
-    font-size: 3rem;
-    font-weight: 700;
-    color: var(--text);
-    margin-bottom: 32px;
-    padding-bottom: 8px;
-    letter-spacing: 1px;
-}
-
 .find-card-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
+    margin-top: 12px;
 }
 
 .find-card {
@@ -686,7 +666,6 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* flex-direction: row; */
     padding: 0;
     background: transparent;
     gap: 8px;
@@ -751,15 +730,15 @@ a {
     gap: 16px;
   }
   .bestseller-heading h2{
-    font-size: clamp(2.5rem, 6vw, 3.4rem);
-    font-weight: 400;
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-weight: 600;
   }
- 
   .bestseller-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
+    padding: 0 1rem;
   }
   
   .bestseller-card {
@@ -770,14 +749,17 @@ a {
     display: flex;
     flex-direction: column;
     cursor: pointer;
+    transition: transform 0.3s ease;
   }
-  .bestseller-card:hover .product-image img{
+  
+  .bestseller-card:hover .product-image img {
     transform: scale(1.08);
   }
+  
   .product-image {
     position: relative;
     width: 100%;
-    height: 260px;
+    height: 240px;
     overflow: hidden;
   }
   
@@ -803,37 +785,50 @@ a {
     font-weight: 600;
   }
   
-  .best-seller,.top-rated  {
-    background-color: #fff;
+  .best-seller,
+  .top-rated {
+    color: #fff;
+    background-color: var(--text);
   }
-
+  
   .product-info {
     padding: 16px;
     display: flex;
     justify-content: space-between;
-    gap: 6px;
+    flex-wrap: wrap;
+    gap: 12px;
   }
- 
+  
+  .bestseller-price {
+    flex: 1 1 100%;
+  }
+  
   .product-name {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 500;
+    margin: 0;
   }
   
   .brand-name {
-    font-size: 15px;
+    font-size: 14px;
     color: var(--text-light);
-    margin-block: 0px 16px;
+    margin: 4px 0 12px;
   }
   
   .price {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: bold;
   }
-  
+  .card-bottom{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin-top: 10px;
+  }
   .color-options {
     display: flex;
     gap: 8px;
-    margin: 16px 0;
   }
   
   .color-swatch {
@@ -843,19 +838,27 @@ a {
     border: none;
     cursor: pointer;
   }
+  
   .color-black {
     background-color: #000;
   }
+  
   .color-red {
     background-color: #ff0000;
   }
+  
   .color-blue {
     background-color: #0000ff;
   }
-  .bestseller-rating{
+  
+  .bestseller-rating {
     color: #FFD700;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 4px;
+    white-space: nowrap;
   }
-
+  
   .add-to-cart {
     background: var(--button);
     color: #ffffff;
@@ -864,18 +867,14 @@ a {
     font-weight: 600;
     text-align: center;
     cursor: pointer;
+    margin-top: auto;
   }
   
   .add-to-cart:hover {
     background: var(--button-hover);
   }
 
-
   /* Why Choose Egma CSS */
-  .why-section {
-    padding: 4rem 2rem;
-  }
-
   .why-content {
     display: flex;
     align-items: flex-start;
@@ -978,9 +977,6 @@ a {
   }
   
 /* ABOUT US CSS */
-.about-section {
-  padding: 4rem 2rem;
-}
 .about-content {
   display: flex;
   flex-direction: row-reverse;
@@ -1032,14 +1028,9 @@ a {
   padding: 4rem 3.5rem;
   background-color: var(--bg-light);
 }
-
-.review-section h2 {
-  font-size: clamp(2.5rem, 6vw, 3.4rem);
-  text-align: center;
-}
 .review-subtitle{
   font-size:20px;
-  margin-block: 20px;
+  margin-top: -24px;
   text-align: center;
   color: var(--text-light);
 }
@@ -1180,58 +1171,29 @@ a {
 
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  row-gap: 28px;
 }
 
 .stat-item {
   text-align: center;
-  padding: 8px 20px;
   transition: transform 0.3s ease;
 }
 
 h2.stat-number {
-  font-size: 48px;
-  font-weight: bold;
+  font-size: 40px;
   color: var(--bg-light);
-  margin-bottom: 10px;
-  line-height: 1.2;
 }
 
 p.stat-label {
-  font-size: 18px;
   color: #fff;
   font-weight: 500;
-  margin: 0;
 }
 
 /* CSS for FAQ */
 .faq-section{
   padding: 4rem 2rem;
   background-color: var(--bg-light);
-}
-.questions-section {
-  display: flex;
-  justify-content: space-between;
-  gap: 60px;
-}
-
-.left-col {
-  flex: 1;
-}
-.left-col p {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 12px;
-  font-weight: 600;
-}
-.questions-section h2{
-  font-size: 48px;
-  font-weight: 400;
-}
-
-.right-col {
-  flex: 2;
 }
 .faq-item {
   border-bottom: 2px solid;
@@ -1245,7 +1207,8 @@ p.stat-label {
   cursor: pointer;
 }
 .faq-question span {
-  font-size: 24px;
+  font-size:clamp(1.06rem, 2.5vw, 1.35rem);
+  font-weight: 400;
 }
 
 .faq-answer {
@@ -1517,12 +1480,15 @@ p.stat-label {
 }
 
 @media screen and (max-width: 980px) {
+    .search-container{
+      display: none;
+    }
     .slider-card{
         min-width: 90%;
     }
-    .bestseller-cards{
+    /* .bestseller-cards{
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    }
+    } */
     .category-card {
     flex: 0 0 180px;
     }
@@ -1548,7 +1514,7 @@ p.stat-label {
     }
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 784px) {
     .top-header-right {
       gap: 10px;
     }
@@ -1556,7 +1522,7 @@ p.stat-label {
         padding: 8px 24px;
     }
 
-    .category-card {
+  .category-card {
     flex: 0 0 150px;
   }
   .category-overlay h4 {
@@ -1565,12 +1531,15 @@ p.stat-label {
   .category-overlay p {
     font-size: 0.7rem;
   }
-    .navbar{
-        padding: 12px 24px 0 24px;
-    }
-    .bestseller-wrapper,.why-section,
-    .about-section,.faq-section,.review-section,.find-section{
-      padding: 3rem 24px;
+  .navbar{
+    padding: 12px 24px 0 24px;
+  }
+  .category-section,.bestseller-wrapper,
+  .review-section,.faq-section{
+      padding: 48px 24px;
+  }
+    .stat-section {
+      padding: 24px;
     }
     .cta-section {
       padding: 0rem 24px;
@@ -1584,7 +1553,6 @@ p.stat-label {
     .hero-content{
         padding-inline: 24px;
     }
-    .search-container,
     .header-link .text {
       display: none;
     }
@@ -1604,30 +1572,20 @@ p.stat-label {
       right: 0px;
   }
   .quote-bottom-left {
-    left: -20px;
+      left: 0px;
   }
   .quote-icon {
     font-size: 30px;
     opacity: 0.6;
   }
-    .cta-wrapper{
-      flex-direction: column;
-      align-items:flex-start;
-    }
-    .footer-bottom-content {
-      flex-direction: column;
-      text-align: center;
-    }
-    .stats-grid {
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      gap: 16px;
-   }
-   h2.stat-number {
-    font-size: 36px;
-   }
-   p.stat-label {
-    font-size: 16px;
-   }
+  .cta-wrapper{
+    flex-direction: column;
+    align-items:flex-start;
+  }
+  .footer-bottom-content {
+    flex-direction: column;
+    text-align: center;
+  }
    .find-card-container {
     grid-template-columns: 1fr;
   }
@@ -1651,31 +1609,37 @@ p.stat-label {
 }
 @media screen and (max-width: 480px) {
     .top-header{
-        padding: 8px;
+        padding: 8px 12px;
+    }
+    .navbar{
+      padding: 12px 12px 0 12px;
     }
     .phone-number{
         font-size: 12px;
     }
-  .category-card {
-    flex: 0 0 120px;
-  }
-  .category-overlay h4 {
-    font-size: 0.9rem;
-  }
-  .category-overlay p {
-    font-size: 0.6rem;
-  }
-  .scroll-btn {
-    width: 35px;
-    height: 35px;
-    font-size: 0.8rem;
-  }
-    .navbar{
-        padding: 12px 8px 0 8px;
+    .hero-content{
+      padding-inline: 12px;
     }
-    .bestseller-wrapper,.why-section,
-    .about-section,.faq-section,.review-section,.find section {
-      padding: 2rem 8px;
+    .category-section,.bestseller-wrapper,
+    .review-section,.faq-section,.find-section{
+      padding: 32px 12px;
+    }
+    .stat-section {
+      padding: 24px 12px;
+    }
+    .category-card {
+      flex: 0 0 120px;
+    }
+    .category-overlay h4 {
+      font-size: 0.9rem;
+    }
+    .category-overlay p {
+      font-size: 0.6rem;
+    }
+    .scroll-btn {
+      width: 35px;
+      height: 35px;
+      font-size: 0.8rem;
     }
     .cta-section {
       padding: 0rem 8px;
@@ -1685,9 +1649,6 @@ p.stat-label {
     }
     .hero-wrapper{
         padding: 1.85rem 0rem;
-    }
-    .hero-content{
-        padding-inline: 8px;
     }
     .nav-logo img {
         height: 32px;
@@ -1706,15 +1667,24 @@ p.stat-label {
     .product-image {
         height: 200px;
     }  
+    .why-image img {
+      height: 450px;
+    }
+    .benefits-list {
+      gap: 20px;
+    }
     .benefits-container {
       flex-direction: column;
-      gap: 24px;
+      gap: 20px;
     }
     .about-content{
       padding: 12px;
     }
     .about-paragraph{
-      font-size: 14px;
+      font-size: 16px;
+    }
+    .about-btn {
+      margin-top: 1rem;
     }
     .questions-section h2{
       font-size: 32px;
@@ -1730,8 +1700,8 @@ p.stat-label {
     .faq-question {
       padding: 12px 0px;
     }
-    .faq-question span,.faq-answer {
-      font-size: 18px;
+    .faq-answer {
+      font-size: 16px;
     }
     .name-btn {
       font-size: 14px;
@@ -1739,8 +1709,14 @@ p.stat-label {
     .discover-btn {
         font-size: 14px;
     }
+    .brand-name {
+      margin: 4px 0 8px;
+    }
     .cta-image{
       height: 200px;
+    }
+    .review-subtitle {
+      font-size: 16px;
     }
     .footer-links {
       grid-template-columns: 1fr;
