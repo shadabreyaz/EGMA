@@ -1567,9 +1567,6 @@ p.stat-label {
     .hero-wrapper{
         padding: 2.85rem 0rem;
     }
-    .hero-content{
-        flex-direction: column;
-    }
     .quote-top-right {
       right: 0px;
   }
