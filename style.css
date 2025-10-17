@@ -1484,13 +1484,16 @@ p.stat-label {
       display: none;
     }
     .hero-content {
-      flex-direction: column;
+      flex-direction: column-reverse;
+    }
+    .hero-wrapper {
+    background: linear-gradient(to top, var(--primary-color), var(--bg-light));
     }
     .hero-slider {
       max-width: 100%;
     }
     .category-card {
-    flex: 0 0 180px;
+    flex: 0 0 240px;
     }
     .why-content {
       flex-direction: column;
@@ -1522,14 +1525,16 @@ p.stat-label {
         padding: 8px 24px;
     }
 
+
   .category-card {
-    flex: 0 0 150px;
+    flex: 0 0 250px;
   }
+
   .category-overlay h4 {
-    font-size: 1rem;
+    font-size: 2rem;
   }
   .category-overlay p {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
   }
   .navbar{
     padding: 12px 24px 0 24px;
@@ -1624,15 +1629,15 @@ p.stat-label {
     .stat-section {
       padding: 24px 12px;
     }
-    .category-card {
-      flex: 0 0 120px;
-    }
-    .category-overlay h4 {
-      font-size: 0.9rem;
-    }
-    .category-overlay p {
-      font-size: 0.6rem;
-    }
+  .category-card {
+    flex: 0 0 185px;
+  }
+  .category-overlay h4 {
+    font-size: 1.8rem;
+  }
+  .category-overlay p {
+    font-size: 1rem;
+  }
     .scroll-btn {
       width: 35px;
       height: 35px;
